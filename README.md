@@ -1,4 +1,4 @@
-# See Google Code Jam Exercises
+# Google Code Jam Exercises
 
 [Google Code Jam](https://code.google.com/codejam)
 

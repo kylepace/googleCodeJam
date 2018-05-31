@@ -30,21 +30,21 @@ class StoreCreditSpec extends FlatSpec with Matchers {
   }
 
   "read file" should "parse file" in {
-    val rows = StoreCredit.parseFile("/small_file.txt")
+    val rows = StoreCredit.parseFile("/storecredit_small_file.txt")
     val firstRow = rows(0)
     assert(firstRow._1 == 100)
     assert(firstRow._2.length == 3)
   }
 
   "writeFile" should "write small text to file" in {
-    val rows = StoreCredit.parseFile("/small_file.txt")
+    val rows = StoreCredit.parseFile("/storecredit_small_file.txt")
     val pairs = rows.map(r => StoreCredit.findPricePair(r._1, r._2))
-    StoreCredit.writeFile("/Users/kpace/Documents/Code/small_file_solution.txt", pairs)
+    StoreCredit.writeFile("/Users/kpace/Documents/Code/storecredit_small_file_solution.txt", pairs)
   }
 
   it should "write large text to file" in {
-    val rows = StoreCredit.parseFile("/large_file.txt")
+    val rows = StoreCredit.parseFile("/storecredit_large_file.txt")
     val pairs = rows.map(r => StoreCredit.findPricePair(r._1, r._2))
-    StoreCredit.writeFile("/Users/kpace/Documents/Code/large_file_solution.txt", pairs)
+    StoreCredit.writeFile("/Users/kpace/Documents/Code/storecredit_large_file_solution.txt", pairs)
   }
 }

@@ -2,9 +2,9 @@ name := """googleCodeJam"""
 
 version := "1.0"
 
-scalaVersion := "2.11.7"
+scalaVersion := "2.12.3"
 
-libraryDependencies += "org.scalatest" %% "scalatest" % "2.2.4" % "test"
+libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.4" % "test"
 
 
 fork in run := true
